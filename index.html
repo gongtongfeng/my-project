@@ -22,7 +22,7 @@
         .particle:nth-child(1){left:10%;animation-duration:12s;animation-delay:0s;width:6px;height:6px}.particle:nth-child(2){left:25%;animation-duration:16s;animation-delay:2s;width:14px;height:14px}.particle:nth-child(3){left:45%;animation-duration:10s;animation-delay:4s;width:8px;height:8px}.particle:nth-child(4){left:65%;animation-duration:18s;animation-delay:1s;width:12px;height:12px}.particle:nth-child(5){left:80%;animation-duration:14s;animation-delay:3s;width:6px;height:6px}.particle:nth-child(6){left:90%;animation-duration:11s;animation-delay:5s;width:10px;height:10px}.particle:nth-child(7){left:35%;animation-duration:15s;animation-delay:6s;width:7px;height:7px}.particle:nth-child(8){left:55%;animation-duration:13s;animation-delay:2.5s;width:9px;height:9px}.particle:nth-child(9){left:75%;animation-duration:17s;animation-delay:1.5s;width:11px;height:11px}.particle:nth-child(10){left:5%;animation-duration:19s;animation-delay:4.5s;width:5px;height:5px}
         @keyframes floatUp{0%{transform:translateY(110vh) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-10vh) rotate(720deg);opacity:0}}
 
-        /* Main Container */
+        /* Main Container - NO 3D TILT */
         .container{background:rgba(255,255,255,0.97);border-radius:24px;box-shadow:0 25px 80px rgba(0,0,0,0.3),0 0 0 1px rgba(255,255,255,0.1);padding:46px 38px;text-align:center;max-width:640px;width:100%;position:relative;z-index:1;backdrop-filter:blur(10px);margin-bottom:24px;animation:containerIn 0.9s cubic-bezier(0.34,1.56,0.64,1)}
         @keyframes containerIn{from{opacity:0;transform:translateY(40px) scale(0.95)}to{opacity:1;transform:translateY(0) scale(1)}}
 
@@ -53,8 +53,8 @@
         .news-date{font-size:0.78em;color:#999;margin-left:auto;font-weight:500}
         .news-divider{height:2px;background:linear-gradient(90deg,transparent,#c0392b,#e74c3c,#c0392b,transparent);border-radius:2px;margin-bottom:16px}
         
-        /* Headline Card */
-        .news-headline{background:linear-gradient(135deg,#fff5f5,#ffe8e8);border:1px solid #f5c6cb;border-left:4px solid #c0392b;border-radius:12px;padding:16px 18px;margin-bottom:14px;transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden}
+        /* Headline Card - clickable with link style */
+        .news-headline{background:linear-gradient(135deg,#fff5f5,#ffe8e8);border:1px solid #f5c6cb;border-left:4px solid #c0392b;border-radius:12px;padding:16px 18px;margin-bottom:14px;transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden;text-decoration:none;display:block;color:inherit}
         .news-headline:hover{transform:translateX(4px);box-shadow:0 6px 25px rgba(192,57,43,0.15)}
         .news-headline::after{content:"头条";position:absolute;top:8px;right:-28px;background:#c0392b;color:#fff;font-size:0.68em;font-weight:700;padding:2px 30px;transform:rotate(45deg)}
         .headline-tag{display:inline-block;background:#c0392b;color:#fff;font-size:0.72em;padding:2px 10px;border-radius:4px;font-weight:700;margin-bottom:8px}
@@ -62,9 +62,9 @@
         .headline-summary{font-size:0.85em;color:#666;line-height:1.6}
         .headline-meta{display:flex;gap:12px;margin-top:8px;font-size:0.76em;color:#aaa}
         
-        /* News Cards Grid */
+        /* News Cards Grid - clickable links */
         .news-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-        .news-card{background:#fafbfc;border:1px solid #e8ecf0;border-radius:10px;padding:14px 15px;transition:all 0.3s;cursor:pointer;position:relative}
+        .news-card{background:#fafbfc;border:1px solid #e8ecf0;border-radius:10px;padding:14px 15px;transition:all 0.3s;cursor:pointer;position:relative;text-decoration:none;display:block;color:inherit}
         .news-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,0.08);border-color:#c0392b}
         .card-category{display:inline-block;font-size:0.7em;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:6px}
         .cat-policy{background:#e8f4fd;color:#1565c0}.cat-tech{background:#e8f5e9;color:#2e7d32}.cat-market{background:#fff3e0;color:#e65100}.cat-cert{background:#fce4ec;color:#c62828}
@@ -72,6 +72,10 @@
         .card-summary{font-size:0.78em;color:#888;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
         .card-meta{display:flex;justify-content:space-between;margin-top:7px;font-size:0.7em;color:#bbb}
         .card-source{font-weight:600}
+        /* External link indicator */
+        .news-card::after,.news-headline::before{content:"↗";position:absolute;opacity:0;transition:opacity 0.3s;font-size:0.85em;color:#c0392b}
+        .news-card::after{top:12px;right:12px}.news-headline::before{top:12px;right:12px;z-index:2}
+        .news-card:hover::after,.news-headline:hover::before{opacity:1}
         
         /* Quote/Footer */
         .news-quote{margin-top:18px;padding:14px 18px;background:linear-gradient(135deg,#f8f9fa,#eef2f7);border-radius:12px;border-left:3px solid #0f3460}
@@ -93,7 +97,6 @@
         .footer{margin-top:26px;color:#bbb;font-size:0.82em;animation:slideUp 0.6s ease 0.72s both}.footer-heart{color:#ff6b8a;display:inline-block;animation:heartbeat 1.2s ease infinite}@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.15)}60%{transform:scale(1)}}
         .ripple{position:fixed;border-radius:50%;background:rgba(255,255,255,0.4);pointer-events:none;z-index:9998;animation:rippleOut 0.7s ease-out forwards;transform:translate(-50%,-50%)}@keyframes rippleOut{from{width:0;height:0;opacity:1}to{width:150px;height:150px;opacity:0}}
         
-        /* Update time badge */
         .update-badge{display:inline-block;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;font-size:0.7em;padding:3px 10px;border-radius:10px;font-weight:600;margin-left:8px;vertical-align:middle}
 
         @media(max-width:600px){body{padding:12px;padding-top:36px;align-items:flex-start}.container{padding:28px 18px;border-radius:18px}.avatar{width:88px;height:88px;font-size:42px;margin-bottom:20px}h1{font-size:1.45em}.subtitle{font-size:0.92em;margin-bottom:20px}.skill{padding:5px 12px;font-size:0.8px}.skills{gap:6px;margin-bottom:14px}.news-grid{grid-template-columns:1fr}.news-headline{padding:13px 14px}.headline-title{font-size:0.95em}.card-title{font-size:0.84em}.link{padding:10px 24px;font-size:0.86em}.links{gap:10px;margin-top:18px}.wechat-box{padding:8px 18px;font-size:0.92em}}
@@ -111,7 +114,6 @@
         <span class="ticker-item">统信UOS发布企业版V23，新增300+国产软硬件适配</span>
         <span class="ticker-item">信创产业规模突破万亿，人才缺口超50万</span>
         <span class="ticker-item">金融行业信创替代完成率已达85%，进入深水区</span>
-        <!-- Duplicate for seamless loop -->
         <span class="ticker-item">工信部发布2026信创产品目录，国产化替代加速推进</span>
         <span class="ticker-item">麒麟操作系统V10 SP3通过安全认证，政务市场占有率突破40%</span>
         <span class="ticker-item">统信UOS发布企业版V23，新增300+国产软硬件适配</span>
@@ -143,8 +145,8 @@
     </div>
     <div class="news-divider"></div>
     
-    <!-- 头条 -->
-    <div class="news-headline">
+    <!-- 头条 - 可点击跳转 -->
+    <a href="https://www.gov.cn/zhengce/zhengceku/" target="_blank" rel="noopener noreferrer" class="news-headline">
         <span class="headline-tag">重磅政策</span>
         <div class="headline-title">九部门联合发文：2026年底前党政机关全面完成信创替代</div>
         <div class="headline-summary">明确要求各级党政机关在2026年12月31日前，全面完成办公系统、终端设备的国产化替代工作。涵盖CPU、操作系统、数据库、中间件、办公软件等全栈信创产品。</div>
@@ -153,34 +155,34 @@
             <span>📰 信创网</span>
             <span>👁 热度 98万+</span>
         </div>
-    </div>
+    </a>
     
-    <!-- 新闻卡片 -->
+    <!-- 新闻卡片 - 全部可点击跳转 -->
     <div class="news-grid">
-        <div class="news-card">
+        <a href="https://www.kylinos.cn/" target="_blank" rel="noopener noreferrer" class="news-card">
             <span class="card-category cat-tech">技术前沿</span>
             <div class="card-title">麒麟V10 SP3内核升级：首次支持RISC-V架构芯片</div>
             <div class="card-summary">中标麒麟最新版本底层内核重大升级，新增对龙芯、飞腾、RISC-V等多架构统一支持。</div>
             <div class="card-meta"><span class="card-source">IT之家</span><span>06-04</span></div>
-        </div>
-        <div class="news-card">
+        </a>
+        <a href="https://www.idc.com/" target="_blank" rel="noopener noreferrer" class="news-card">
             <span class="card-category cat-market">行业数据</span>
             <div class="card-title">2026 Q1信创服务器出货量同比增长127%，华为/浪潮领跑</div>
             <div class="card-summary">一季度信创服务器市场规模达280亿元，金融和能源行业采购量占比超过60%。</div>
             <div class="card-meta"><span class="card-source">IDC报告</span><span>06-03</span></div>
-        </div>
-        <div class="news-card">
+        </a>
+        <a href="https://www.sasac.gov.cn/" target="_blank" rel="noopener noreferrer" class="news-card">
             <span class="card-category cat-policy">政策解读</span>
             <div class="card-title">国资委：央企信创替代纳入年度KPI考核指标</div>
             <div class="card-summary">国资委明确将信创替代进度纳入央企负责人经营业绩考核，未达标企业将被约谈。</div>
             <div class="card-meta"><span class="card-source">国务院官网</span><span>06-02</span></div>
-        </div>
-        <div class="news-card">
+        </a>
+        <a href="https://www.uniontech.com/" target="_blank" rel="noopener noreferrer" class="news-card">
             <span class="card-category cat-cert">认证培训</span>
             <div class="card-title">统信UOS认证体系升级：新增高级运维工程师认证方向</div>
             <div class="card-summary">统信软件宣布扩充认证体系，新设桌面运维高级、服务器运维等5个专业方向。</div>
             <div class="card-meta"><span class="card-source">统信官方</span><span>06-01</span></div>
-        </div>
+        </a>
     </div>
     
     <!-- 行业金句 -->
@@ -227,8 +229,7 @@ document.querySelectorAll(".skill").forEach(function(el){el.addEventListener("cl
 var wechatBox=document.querySelector(".wechat-box");var wechatId=document.getElementById("wechat-id");
 wechatBox.addEventListener("click",function(){navigator.clipboard.writeText(wechatId.textContent).then(function(){var orig=wechatBox.innerHTML;wechatBox.innerHTML='<span class="wechat-icon">✅</span> 已复制！';setTimeout(function(){wechatBox.innerHTML=orig},1500)},function(){})});
 
-/* 3D tilt on desktop */
-if(window.matchMedia("(min-width:768px)").matches){var c=document.querySelector(".container");document.addEventListener("mousemove",function(e){var x=(window.innerWidth/2-e.clientX)/40;var y=(window.innerHeight/2-e.clientY)/40;c.style.transform="perspective(800px) rotateY("+x+"deg) rotateX("+y+"deg)"});document.addEventListener("mouseleave",function(){c.style.transform="perspective(800px) rotateY(0deg) rotateX(0deg)"})}
+/* === REMOVED: 3D tilt effect on mousemove === */
 
 /* Update time display */
 var now=new Date();var months=["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
