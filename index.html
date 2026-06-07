@@ -3,37 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>淇″垱杩愮淮宸ョ▼甯?- 涓汉涓婚〉</title>
+    <title>IT Engineer - Personal Page</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            overflow-x: hidden;
-            position: relative;
+            min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; overflow-x: hidden; position: relative;
         }
-        
-        /* Floating particles */
-        .particles {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
-        .particle {
-            position: absolute;
-            width: 10px; height: 10px;
-            background: rgba(100,200,255,0.15);
-            border-radius: 50%;
-            animation: floatUp linear infinite;
-        }
+        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; }
+        .particle { position: absolute; width: 10px; height: 10px; background: rgba(100,200,255,0.15); border-radius: 50%; animation: floatUp linear infinite; }
         .particle:nth-child(1) { left: 10%; animation-duration: 12s; animation-delay: 0s; width: 6px; height: 6px; }
         .particle:nth-child(2) { left: 25%; animation-duration: 16s; animation-delay: 2s; width: 14px; height: 14px; }
         .particle:nth-child(3) { left: 45%; animation-duration: 10s; animation-delay: 4s; width: 8px; height: 8px; }
@@ -44,500 +23,131 @@
         .particle:nth-child(8) { left: 55%; animation-duration: 13s; animation-delay: 2.5s; width: 9px; height: 9px; }
         .particle:nth-child(9) { left: 75%; animation-duration: 17s; animation-delay: 1.5s; width: 11px; height: 11px; }
         .particle:nth-child(10) { left: 5%; animation-duration: 19s; animation-delay: 4.5s; width: 5px; height: 5px; }
-
-        @keyframes floatUp {
-            0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
-        }
-
-        /* Main container */
+        @keyframes floatUp { 0% { transform: translateY(110vh) rotate(0deg); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; } }
         .container {
-            background: rgba(255,255,255,0.95);
-            border-radius: 24px;
-            box-shadow: 0 25px 80px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1);
-            padding: 50px 40px;
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95); border-radius: 24px; box-shadow: 0 25px 80px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1);
+            padding: 50px 40px; text-align: center; max-width: 600px; width: 100%; position: relative; z-index: 1; backdrop-filter: blur(10px);
             animation: containerIn 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        @keyframes containerIn {
-            from { opacity: 0; transform: translateY(40px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        /* Avatar */
+        @keyframes containerIn { from { opacity: 0; transform: translateY(40px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
         .avatar {
-            width: 120px; height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0f3460, #16213e, #533483);
-            background-size: 200% 200%;
-            margin: 0 auto 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 56px;
-            line-height: 1;
-            box-shadow: 0 12px 35px rgba(15,52,96,0.45);
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s;
-            animation: gradientShift 4s ease infinite, avatarIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.2s both;
-            user-select: none;
-            -webkit-tap-highlight-color: transparent;
+            width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #0f3460, #16213e, #533483); background-size: 200% 200%;
+            margin: 0 auto 30px; display: flex; justify-content: center; align-items: center; font-size: 56px; line-height: 1;
+            box-shadow: 0 12px 35px rgba(15,52,96,0.45); cursor: pointer; transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s;
+            animation: gradientShift 4s ease infinite, avatarIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.2s both; user-select: none; -webkit-tap-highlight-color: transparent;
         }
-        .avatar:hover {
-            transform: scale(1.12) rotate(5deg);
-            box-shadow: 0 18px 50px rgba(15,52,96,0.55);
-        }
+        .avatar:hover { transform: scale(1.12) rotate(5deg); box-shadow: 0 18px 50px rgba(15,52,96,0.55); }
         .avatar:active { transform: scale(0.95); }
-        .avatar.clicked {
-            animation: avatarBounce 0.6s ease;
-        }
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        @keyframes avatarIn {
-            from { opacity: 0; transform: scale(0) rotate(-180deg); }
-            to { opacity: 1; transform: scale(1) rotate(0deg); }
-        }
-        @keyframes avatarBounce {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            25% { transform: scale(1.25) rotate(-10deg); }
-            50% { transform: scale(0.9) rotate(10deg); }
-            75% { transform: scale(1.15) rotate(-5deg); }
-        }
-
-        /* Typing text */
-        h1 {
-            color: #1a1a2e;
-            margin-bottom: 8px;
-            font-size: 1.85em;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            animation: slideUp 0.6s ease 0.35s both;
-        }
-        .subtitle {
-            color: #555;
-            font-size: 1.05em;
-            margin-bottom: 32px;
-            line-height: 1.5;
-            animation: slideUp 0.6s ease 0.45s both;
-        }
-        .typing-cursor {
-            display: inline-block;
-            width: 2px; height: 1em;
-            background: #0f3460;
-            margin-left: 2px;
-            vertical-align: text-bottom;
-            animation: blink 0.8s step-end infinite;
-        }
+        @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        @keyframes avatarIn { from { opacity: 0; transform: scale(0) rotate(-180deg); } to { opacity: 1; transform: scale(1) rotate(0deg); } }
+        h1 { color: #1a1a2e; margin-bottom: 8px; font-size: 1.85em; font-weight: 800; letter-spacing: -0.5px; animation: slideUp 0.6s ease 0.35s both; }
+        .subtitle { color: #555; font-size: 1.05em; margin-bottom: 32px; line-height: 1.5; animation: slideUp 0.6s ease 0.45s both; }
+        .typing-cursor { display: inline-block; width: 2px; height: 1em; background: #0f3460; margin-left: 2px; vertical-align: text-bottom; animation: blink 0.8s step-end infinite; }
         @keyframes blink { 50% { opacity: 0; } }
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Skills */
-        .skills {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-            animation: slideUp 0.6s ease 0.55s both;
-        }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .skills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; animation: slideUp 0.6s ease 0.55s both; }
         .skill {
-            background: linear-gradient(135deg, #e8f0fe, #dbeafe);
-            color: #1a3a5c;
-            padding: 7px 18px;
-            border-radius: 20px;
-            font-size: 0.88em;
-            font-weight: 600;
-            transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
-            cursor: default;
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #e8f0fe, #dbeafe); color: #1a3a5c; padding: 7px 18px; border-radius: 20px;
+            font-size: 0.88em; font-weight: 600; transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1); cursor: default; position: relative; overflow: hidden;
         }
-        .skill::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-            transition: left 0.5s;
-        }
-        .skill:hover {
-            transform: translateY(-3px) scale(1.05);
-            background: linear-gradient(135deg, #0f3460, #16213e);
-            color: white;
-            box-shadow: 0 6px 20px rgba(15,52,96,0.35);
-        }
+        .skill::before { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); transition: left 0.5s; }
+        .skill:hover { transform: translateY(-3px) scale(1.05); background: linear-gradient(135deg, #0f3460, #16213e); color: white; box-shadow: 0 6px 20px rgba(15,52,96,0.35); }
         .skill:hover::before { left: 100%; }
-
-        /* Cert section */
-        .certs {
-            margin: 20px 0 28px 0;
-            animation: slideUp 0.6s ease 0.6s both;
-        }
+        .certs { margin: 20px 0 28px 0; animation: slideUp 0.6s ease 0.6s both; }
         .cert-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: white;
-            padding: 8px 22px;
-            border-radius: 20px;
-            font-size: 0.92em;
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(245,158,11,0.35);
-            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 8px 22px; border-radius: 20px;
+            font-size: 0.92em; font-weight: 700; box-shadow: 0 4px 15px rgba(245,158,11,0.35); transition: transform 0.3s, box-shadow 0.3s;
         }
-        .cert-badge:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(245,158,11,0.5);
-        }
-
-        /* Contact section */
-        .contact {
-            margin: 24px 0 10px 0;
-            animation: slideUp 0.6s ease 0.65s both;
-        }
-        .contact-title {
-            font-size: 0.92em;
-            color: #888;
-            margin-bottom: 12px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+        .cert-badge:hover { transform: translateY(-2px) scale(1.05); box-shadow: 0 8px 25px rgba(245,158,11,0.5); }
+        .contact { margin: 24px 0 10px 0; animation: slideUp 0.6s ease 0.65s both; }
+        .contact-title { font-size: 0.92em; color: #888; margin-bottom: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
         .wechat-box {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #07c160, #06ad56);
-            color: white;
-            padding: 10px 24px;
-            border-radius: 16px;
-            font-weight: 700;
-            font-size: 1.05em;
-            box-shadow: 0 4px 18px rgba(7,193,96,0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            user-select: all;
+            display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #07c160, #06ad56); color: white;
+            padding: 10px 24px; border-radius: 16px; font-weight: 700; font-size: 1.05em; box-shadow: 0 4px 18px rgba(7,193,96,0.3);
+            transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; user-select: all;
         }
-        .wechat-box:hover {
-            transform: translateY(-2px) scale(1.04);
-            box-shadow: 0 8px 28px rgba(7,193,96,0.45);
-        }
+        .wechat-box:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 8px 28px rgba(7,193,96,0.45); }
         .wechat-icon { font-size: 1.3em; }
-
-        /* Links */
-        .links {
-            display: flex;
-            gap: 14px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 28px;
-            animation: slideUp 0.6s ease 0.7s both;
-        }
+        .links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 28px; animation: slideUp 0.6s ease 0.7s both; }
         .link {
-            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
-            color: white;
-            padding: 13px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95em;
-            letter-spacing: 0.3px;
-            transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            -webkit-tap-highlight-color: transparent;
+            background: linear-gradient(135deg, #0f3460, #16213e); color: white; padding: 13px 32px; border-radius: 50px; text-decoration: none;
+            font-weight: 700; font-size: 0.95em; letter-spacing: 0.3px; transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1); position: relative; overflow: hidden; z-index: 1; -webkit-tap-highlight-color: transparent;
         }
-        .link::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, #16213e, #533483);
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.35s;
-        }
-        .link:hover {
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 12px 30px rgba(15,52,96,0.45);
-        }
+        .link::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #16213e, #533483); z-index: -1; opacity: 0; transition: opacity 0.35s; }
+        .link:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 12px 30px rgba(15,52,96,0.45); }
         .link:hover::before { opacity: 1; }
-        .link:active { transform: translateY(-1px) scale(0.98); }
-
-        /* Footer */
-        .footer {
-            margin-top: 32px;
-            color: #bbb;
-            font-size: 0.85em;
-            animation: slideUp 0.6s ease 0.75s both;
-        }
-        .footer-heart {
-            color: #ff6b8a;
-            display: inline-block;
-            animation: heartbeat 1.2s ease infinite;
-        }
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            15% { transform: scale(1.25); }
-            30% { transform: scale(1); }
-            45% { transform: scale(1.15); }
-            60% { transform: scale(1); }
-        }
-
-        /* Tooltip */
-        .tooltip {
-            position: fixed;
-            background: rgba(30,30,40,0.92);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 10px;
-            font-size: 0.85em;
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0;
-            transition: opacity 0.25s;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        /* Click ripple */
-        .ripple {
-            position: fixed;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.4);
-            pointer-events: none;
-            z-index: 9998;
-            animation: rippleOut 0.7s ease-out forwards;
-            transform: translate(-50%, -50%);
-        }
-        @keyframes rippleOut {
-            from { width: 0; height: 0; opacity: 1; }
-            to { width: 150px; height: 150px; opacity: 0; }
-        }
-
-        /* Mobile responsive */
-        @media (max-width: 600px) {
-            body { padding: 15px; align-items: flex-start; padding-top: 8vh; }
-            .container { 
-                padding: 36px 24px; 
-                border-radius: 20px; 
-                animation: containerInMobile 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
-            }
-            @keyframes containerInMobile {
-                from { opacity: 0; transform: translateY(30px) scale(0.97); }
-                to { opacity: 1; transform: translateY(0) scale(1); }
-            }
-            .avatar { width: 96px; height: 96px; font-size: 44px; margin-bottom: 24px; }
-            h1 { font-size: 1.5em; }
-            .subtitle { font-size: 0.95em; margin-bottom: 26px; }
-            .skill { padding: 6px 14px; font-size: 0.82em; }
-            .link { padding: 11px 26px; font-size: 0.9em; }
-            .links { gap: 10px; margin-top: 22px; }
-            .skills { gap: 8px; margin-bottom: 16px; }
-            .footer { margin-top: 26px; font-size: 0.82em; }
-            .wechat-box { padding: 9px 20px; font-size: 0.95em; }
-        }
-
-        @media (max-width: 380px) {
-            body { padding: 12px; }
-            .container { padding: 28px 18px; }
-            .avatar { width: 80px; height: 80px; font-size: 38px; }
-            h1 { font-size: 1.3em; }
-            .link { padding: 10px 22px; font-size: 0.85em; }
-        }
-
-        /* Dark mode support */
-        @media (prefers-color-scheme: dark) {
-            .container { background: rgba(22,22,30,0.95); }
-            h1 { color: #eee; }
-            .subtitle { color: #aaa; }
-            .skill { background: rgba(255,255,255,0.08); color: #ccc; }
-            .footer { color: #666; }
-        }
+        .footer { margin-top: 32px; color: #bbb; font-size: 0.85em; animation: slideUp 0.6s ease 0.75s both; }
+        .footer-heart { color: #ff6b8a; display: inline-block; animation: heartbeat 1.2s ease infinite; }
+        @keyframes heartbeat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.25); } 30% { transform: scale(1); } 45% { transform: scale(1.15); } 60% { transform: scale(1); } }
+        .tooltip { position: fixed; background: rgba(30,30,40,0.92); color: white; padding: 8px 16px; border-radius: 10px; font-size: 0.85em; pointer-events: none; z-index: 9999; opacity: 0; transition: opacity 0.25s; backdrop-filter: blur(8px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+        .ripple { position: fixed; border-radius: 50%; background: rgba(255,255,255,0.4); pointer-events: none; z-index: 9998; animation: rippleOut 0.7s ease-out forwards; transform: translate(-50%, -50%); }
+        @keyframes rippleOut { from { width: 0; height: 0; opacity: 1; } to { width: 150px; height: 150px; opacity: 0; } }
+        @media (max-width: 600px) { body { padding: 15px; align-items: flex-start; padding-top: 8vh; } .container { padding: 36px 24px; border-radius: 20px; } .avatar { width: 96px; height: 96px; font-size: 44px; margin-bottom: 24px; } h1 { font-size: 1.5em; } .subtitle { font-size: 0.95em; margin-bottom: 26px; } .skill { padding: 6px 14px; font-size: 0.82em; } .link { padding: 11px 26px; font-size: 0.9em; } .skills { gap: 8px; margin-bottom: 16px; } .wechat-box { padding: 9px 20px; font-size: 0.95em; } }
+        @media (max-width: 380px) { body { padding: 12px; } .container { padding: 28px 18px; } .avatar { width: 80px; height: 80px; font-size: 38px; } h1 { font-size: 1.3em; } .link { padding: 10px 22px; font-size: 0.85em; } }
+        @media (prefers-color-scheme: dark) { .container { background: rgba(22,22,30,0.95); } h1 { color: #eee; } .subtitle { color: #aaa; } .skill { background: rgba(255,255,255,0.08); color: #ccc; } .footer { color: #666; } }
     </style>
 </head>
 <body>
-
-    <!-- Floating particles -->
-    <div class="particles">
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div>
-    </div>
-
-    <!-- Main card -->
+    <div class="particles"><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div></div>
     <div class="container">
-        <div class="avatar" id="avatar">馃枼锔?/div>
-        <h1>淇″垱妗岄潰杩愮淮宸ョ▼甯?/h1>
+        <div class="avatar" id="avatar">&#x1F4BB;</div>
+        <h1>&#x2049;&#xFE0F; IT Operations Engineer</h1>
         <p class="subtitle"><span id="typed-text"></span><span class="typing-cursor"></span></p>
-        
         <div class="skills">
-            <span class="skill">Windows 杩愮淮</span>
-            <span class="skill">Linux 杩愮淮</span>
-            <span class="skill">楹掗簾绯荤粺</span>
-            <span class="skill">缁熶俊 UOS</span>
-            <span class="skill">鍥戒骇鍖栭€傞厤</span>
-            <span class="skill">淇″垱瑙ｅ喅鏂规</span>
+            <span class="skill">Windows Ops</span>
+            <span class="skill">Linux Ops</span>
+            <span class="skill">Kylin OS</span>
+            <span class="skill">UOS</span>
+            <span class="skill">Domestic Adaptation</span>
+            <span class="skill">Xinchuang Solutions</span>
         </div>
-
         <div class="certs">
-            <span class="cert-badge">馃弲 缁熶俊 UOS 璁よ瘉宸ョ▼甯?/span>
+            <span class="cert-badge">&#x1F3C6; UOS Certified Engineer</span>
         </div>
-
         <div class="contact">
-            <div class="contact-title">鑱旂郴鏂瑰紡</div>
-            <div class="wechat-box" title="鐐瑰嚮澶嶅埗寰俊鍙?>
-                <span class="wechat-icon">馃挰</span>
+            <div class="contact-title">Contact</div>
+            <div class="wechat-box" title="Click to copy WeChat ID">
+                <span class="wechat-icon">&#x1F4AC;</span>
                 <span id="wechat-id">tgf668888</span>
             </div>
         </div>
-        
         <div class="links">
             <a href="https://github.com/gongtongfeng" class="link" target="_blank">GitHub</a>
-            <a href="#" class="link">鍗氬</a>
-            <a href="#" class="link">绠€鍘?/a>
+            <a href="#" class="link">Blog</a>
+            <a href="#" class="link">Resume</a>
         </div>
-        
-        <p class="footer">Created with <span class="footer-heart">鈾?/span> by QClaw AI | 2026</p>
+        <p class="footer">Created with <span class="footer-heart">&#x2764;</span> by QClaw AI | 2026</p>
     </div>
-
-    <!-- Tooltip element -->
     <div class="tooltip" id="tooltip"></div>
-
     <script>
-        // Typing effect
-        const texts = [
-            "Windows / Linux 杩愮淮",
-            "淇″垱缁堢鍥戒骇鍖栭€傞厤",
-            "楹掗簾 & 缁熶俊 UOS 涓撳",
-            "妗岄潰杩愮淮瑙ｅ喅鏂规"
-        ];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
+        const texts = ["Windows / Linux Operations", "Domestic IT Adaptation Expert", "Kylin & UOS Specialist", "Desktop Maintenance Solutions"];
+        let textIndex = 0, charIndex = 0, isDeleting = false;
         const typedEl = document.getElementById("typed-text");
-
         function typeEffect() {
             const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                typedEl.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typedEl.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
+            if (isDeleting) { typedEl.textContent = currentText.substring(0, charIndex - 1); charIndex--; }
+            else { typedEl.textContent = currentText.substring(0, charIndex + 1); charIndex++; }
             let speed = isDeleting ? 40 : 100;
-
-            if (!isDeleting && charIndex === currentText.length) {
-                speed = 2200;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-                speed = 400;
-            }
-
+            if (!isDeleting && charIndex === currentText.length) { speed = 2200; isDeleting = true; }
+            else if (isDeleting && charIndex === 0) { isDeleting = false; textIndex = (textIndex + 1) % texts.length; speed = 400; }
             setTimeout(typeEffect, speed);
-        }
-        typeEffect();
-
-        // Avatar click interaction
+        } typeEffect();
         const avatar = document.getElementById("avatar");
-        const emojis = ["馃枼锔?, "鈿欙笍", "馃惂", "馃弳", "鉁?, "馃殌", "馃挭", "馃敡"];
+        const emojis = ["&#x1F4BB;", "&#x2699;&#xFE0F;", "&#x1F427;", "&#x1F3C6;", "&#x2705;", "&#x1F680;", "&#x1F4AA;", "&#x1F527;"];
         let emojiIdx = 0;
-
-        avatar.addEventListener("click", (e) => {
-            emojiIdx = (emojiIdx + 1) % emojis.length;
-            avatar.textContent = emojis[emojiIdx];
-            avatar.classList.remove("clicked");
-            void avatar.offsetWidth;
-            avatar.classList.add("clicked");
-            createRipple(e);
+        avatar.addEventListener("click", function(e) {
+            emojiIdx = (emojiIdx + 1) % emojis.length; avatar.textContent = emojis[emojiIdx];
+            avatar.classList.remove("clicked"); void avatar.offsetWidth; avatar.classList.add("clicked"); createRipple(e);
         });
-
-        // Ripple effect on click anywhere
-        function createRipple(e) {
-            const ripple = document.createElement("div");
-            ripple.className = "ripple";
-            ripple.style.left = e.clientX + "px";
-            ripple.style.top = e.clientY + "px";
-            document.body.appendChild(ripple);
-            setTimeout(() => ripple.remove(), 700);
-        }
-        document.addEventListener("click", (e) => {
-            if (e.target.closest(".container")) createRipple(e);
-        });
-
-        // Hover tooltip for links
-        const tooltip = document.getElementById("tooltip");
-        document.querySelectorAll("[data-tip]").forEach(el => {
-            el.addEventListener("mouseenter", (e) => {
-                tooltip.textContent = el.dataset.tip;
-                tooltip.style.opacity = "1";
-                updateTooltipPos(e);
-            });
-            el.addEventListener("mousemove", updateTooltipPos);
-            el.addEventListener("mouseleave", () => {
-                tooltip.style.opacity = "0";
-            });
-        });
-
-        function updateTooltipPos(e) {
-            tooltip.style.left = (e.clientX + 12) + "px";
-            tooltip.style.top = (e.clientY - 36) + "px";
-        }
-
-        // Skill hover feedback
-        document.querySelectorAll(".skill").forEach(el => {
-            el.addEventListener("click", () => {
-                el.style.transform = "translateY(-6px) scale(1.15)";
-                setTimeout(() => { el.style.transform = ""; }, 250);
-            });
-        });
-
-        // WeChat copy
-        const wechatBox = document.querySelector(".wechat-box");
-        const wechatId = document.getElementById("wechat-id");
-        wechatBox.addEventListener("click", () => {
-            navigator.clipboard.writeText(wechatId.textContent).then(() => {
-                const orig = wechatBox.innerHTML;
-                wechatBox.innerHTML = "<span class=\"wechat-icon\">鉁?/span> 宸插鍒讹紒";
-                setTimeout(() => { wechatBox.innerHTML = orig; }, 1500);
-            }).catch(() => {
-                // fallback
-                const range = document.createRange();
-                range.selectNode(wechatId);
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(range);
-            });
-        });
-
-        // Parallax on mouse move (desktop only)
+        function createRipple(e) { var r = document.createElement("div"); r.className = "ripple"; r.style.left = e.clientX + "px"; r.style.top = e.clientY + "px"; document.body.appendChild(r); setTimeout(function() { r.remove(); }, 700); }
+        document.addEventListener("click", function(e) { if (e.target.closest(".container")) createRipple(e); });
+        document.querySelectorAll(".skill").forEach(function(el) { el.addEventListener("click", function() { el.style.transform = "translateY(-6px) scale(1.15)"; setTimeout(function() { el.style.transform = ""; }, 250); }); });
+        var wechatBox = document.querySelector(".wechat-box"); var wechatId = document.getElementById("wechat-id");
+        wechatBox.addEventListener("click", function() { navigator.clipboard.writeText(wechatId.textContent).then(function() { var orig = wechatBox.innerHTML; wechatBox.innerHTML = "<span class=\"wechat-icon\">&#x2705;</span> Copied!"; setTimeout(function() { wechatBox.innerHTML = orig; }, 1500); }).catch(function() {}); });
         if (window.matchMedia("(min-width: 768px)").matches) {
-            const container = document.querySelector(".container");
-            document.addEventListener("mousemove", (e) => {
-                const x = (window.innerWidth / 2 - e.clientX) / 40;
-                const y = (window.innerHeight / 2 - e.clientY) / 40;
-                container.style.transform = `perspective(800px) rotateY(${x}deg) rotateX(${y}deg)`;
-            });
-            document.addEventListener("mouseleave", () => {
-                container.style.transform = "perspective(800px) rotateY(0deg) rotateX(0deg)";
-            });
+            var c = document.querySelector(".container");
+            document.addEventListener("mousemove", function(e) { var x = (window.innerWidth / 2 - e.clientX) / 40; var y = (window.innerHeight / 2 - e.clientY) / 40; c.style.transform = "perspective(800px) rotateY(" + x + "deg) rotateX(" + y + "deg)"; });
+            document.addEventListener("mouseleave", function() { c.style.transform = "perspective(800px) rotateY(0deg) rotateX(0deg)"; });
         }
     </script>
-</body>
-</html>
+</body></html>
