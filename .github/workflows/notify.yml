@@ -1,0 +1,41 @@
+name: Giscus 留言微信通知
+
+on:
+  discussion:
+    types: [created]
+  discussion_comment:
+    types: [created]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 发送微信通知 via PushPlus
+        run: |
+          # 提取留言信息
+          AUTHOR="${{ github.actor }}"
+          ACTION="${{ github.event.action }}"
+          TITLE="${{ github.event.discussion.title }}"
+          BODY="${{ github.event.comment.body || github.event.discussion.body }}"
+          URL="${{ github.event.discussion.html_url || github.event.discussion.url }}"
+
+          # 截断内容防止超长
+          SHORT_BODY=$(echo "$BODY" | head -c 200)
+
+          # 构建通知内容
+          if [ "$ACTION" = "created" ]; then
+            if [ "${{ github.event.discussion }}" != "" ]; then
+              MSG_TITLE="💬 新留言：$TITLE"
+              MSG_CONTENT="留言人：$AUTHOR%0A内容：$SHORT_BODY%0A%0A🔗 查看回复：$URL"
+            else
+              MSG_TITLE="💬 新回复：$TITLE"
+              MSG_CONTENT="回复人：$AUTHOR%0A内容：$SHORT_BODY%0A%0A🔗 查看回复：$URL"
+            fi
+          fi
+
+          # 调用 PushPlus API
+          curl -s -X POST "http://www.pushplus.plus/send" \
+            -H "Content-Type: application/json" \
+            -d "{\"token\":\"${{ secrets.PUSHPLUS_TOKEN }}\",\"title\":\"$MSG_TITLE\",\"content\":\"$MSG_CONTENT\",\"channel\":\"wechat\"}"
+
+          echo "✅ 微信通知已发送"
