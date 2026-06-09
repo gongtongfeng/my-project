@@ -192,31 +192,48 @@
     </div>
 </div>
 
-<!-- ===== 留言板 Giscus ===== -->
-<div class="giscus-wrap" style="margin:32px 0 20px 0;animation:slideUp 0.6s ease 0.75s both">
-    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px">
-        <span style="font-size:1.3em">💬</span>
-        <span style="font-size:1.1em;font-weight:800;color:#1a1a2e;letter-spacing:1px">留 言 板</span>
-        <span style="font-size:0.72em;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:2px 10px;border-radius:10px;font-weight:600;vertical-align:middle">New</span>
-    </div>
-    <div style="height:2px;background:linear-gradient(90deg,transparent,#0f3460,#16213e,#0f3460,transparent);border-radius:2px;margin-bottom:18px"></div>
-    <div id="giscus-container"></div>
-    <script src="https://giscus.app/client.js"
-            data-repo="gongtongfeng/my-project"
-            data-repo-id="R_kgDOSzkcBQ"
-            data-category="General"
-            data-category-id="DIC_kwDOSzkcBc4C-swv"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="preferred_color_scheme"
-            data-lang="zh-CN"
-            crossorigin="anonymous"
-            async>
-    </script>
-</div>
+<style>
+.gbw{background:linear-gradient(135deg,rgba(0,40,80,0.6),rgba(0,60,120,0.4));border-radius:16px;padding:24px;margin-bottom:32px;border:1px solid rgba(100,180,255,0.2);backdrop-filter:blur(10px)}
+.gbw textarea{width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(100,180,255,0.25);border-radius:12px;padding:14px 18px;color:#1a1a2e;font-size:15px;resize:vertical;min-height:90px;font-family:"FangSong","仿宋",STFangsong,"FangSong_GB2312","仿宋_GB2312",serif;transition:all .3s ease;box-sizing:border-box;outline:none}
+.gbw textarea:focus{border-color:#64b4ff;box-shadow:0 0 20px rgba(100,180,255,0.2)}
+.gbw textarea::placeholder{color:#999999}
+.gbf{display:flex;justify-content:flex-end;align-items:center;margin-top:12px}
+#gbBtn{background:linear-gradient(135deg,#0066cc,#0099ff);color:#fff;border:none;padding:10px 24px;border-radius:10px;font-size:14px;cursor:pointer;font-weight:600;transition:all .3s ease;display:flex;align-items:center;gap:6px}
+#gbBtn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,102,204,0.4)}
+#gbBtn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.gbl{max-height:600px;overflow-y:auto;padding-right:8px}
+.gbl::-webkit-scrollbar{width:5px}.gbl::-webkit-scrollbar-track{background:rgba(255,255,255,0.05);border-radius:10px}.gbl::-webkit-scrollbar-thumb{background:rgba(100,180,255,0.3);border-radius:10px}
+.gbi{background:rgba(255,255,255,0.05);border-radius:12px;padding:18px 22px;margin-bottom:14px;border-left:3px solid #0088ff;transition:all .3s ease;animation:gbslide .4s ease-out;font-family:"FangSong","仿宋",STFangsong,"FangSong_GB2312","仿宋_GB2312",serif}
+@keyframes gbslide{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+.gbi:hover{background:rgba(255,255,255,0.09);transform:translateX(4px)}
+.gbm{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.gba{font-weight:700;font-size:14px;color:#0044aa;display:flex;align-items:center;gap:6px}.gba i{font-size:12px;color:#0088ff}
+.gbt{font-size:12px;color:#666666}
+.gbb{color:#1a1a2e;font-size:14px;line-height:1.7;white-space:pre-wrap;word-break:break-word}
+.gbe{text-align:center;padding:50px 20px;color:#888888}.gbe i{font-size:48px;margin-bottom:16px;display:block;opacity:.3}
+.gbling{text-align:center;padding:40px;color:#888888}
+.gbsok{background:rgba(0,180,100,0.15);border:1px solid rgba(0,200,120,0.3);color:#0a5c2e;padding:12px 18px;border-radius:10px;text-align:center;margin-top:12px;animation:gbfade .3s ease}
+.gberr{background:rgba(255,60,60,0.15);border:1px solid rgba(255,80,80,0.3);color:#8b0000;padding:12px 18px;border-radius:10px;text-align:center;margin-top:12px;animation:gbfade .3s ease}
+@keyframes gbfade{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+</style>
+<section id="guestbook" class="section"><div class="container">
+<h2 class="section-title"><i class="fas fa-comments"></i> 留言板</h2>
+<div class="gbw"><div><textarea id="gbInput" placeholder="写下你的留言..." rows="3" maxlength="500"></textarea>
+<div class="gbf"><button id="gbBtn" onclick="gbSend()"><i class="fas fa-paper-plane"></i> 发送留言</button></div></div></div>
+<div id="gbList" class="gbl"><div class="gbling"><i class="fas fa-spinner fa-spin"></i> 加载中...</div></div>
+</div></section>
+<script>
+(function(){
+var API='https://api.jsonblob.com/blobs/019ea300-b2f0-7bba-a9aa-03f171f71c11',_L=null;
+function _IP(){if(_L)return _L;return fetch('https://ipapi.co/json/').then(function(r){return r.json()}).then(function(d){_L=d.city&&d.country_name?d.city+', '+d.country_name:(d.country_name||'未知');return _L}).catch(function(){return fetch('https://ipinfo.io/json').then(function(r){return r.json()}).then(function(d){_L=d.city&&d.country?d.city+', '+d.country:(d.country||'未知');return _L}).catch(function(){_L='未知';return _L})})}
+function _T(t){var d=new Date(t),p=function(n){return String(n).padStart(2,'0')};return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+' '+p(d.getHours())+':'+p(d.getMinutes())}
+function _E(s){var e=document.createElement('div');e.textContent=s;return e.innerHTML}
+function _R(m,b){var o={method:m,headers:{'Content-Type':'application/json','Accept':'application/json'}};if(b)o.body=JSON.stringify(b);return fetch(API,o).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})}
+function _LD(){var el=document.getElementById('gbList');el.innerHTML='<div class="gbling"><i class="fas fa-spinner fa-spin"></i> 加载中...</div>';_R('GET').then(function(d){var m=d.messages||[];if(!m.length){el.innerHTML='<div class="gbe"><i class="fas fa-comment-dots"></i><p>暂无留言，来说点什么吧~</p></div>';return}el.innerHTML=m.map(function(x){return '<div class="gbi"><div class="gbm"><span class="gba"><i class="fas fa-map-marker-alt"></i> '+_E(x.location)+'</span><span class="gbt">'+_T(x.time)+'</span></div><div class="gbb">'+_E(x.text)+'</div></div>'}).join('')}).catch(function(){el.innerHTML='<div class="gberr">加载失败，请刷新重试</div>'})}
+function _SD(){var I=document.getElementById('gbInput'),B=document.getElementById('gbBtn'),m=I.value.trim();if(!m){alert('请输入留言内容~');I.focus();return}B.disabled=true;B.innerHTML='<i class="fas fa-spinner fa-spin"></i> 发送中...';var P=document.querySelector('.gbsok,.gberr');if(P)P.remove();_IP().then(function(loc){return _R('GET').then(function(d){var ms=d.messages||[];ms.push({location:loc,text:m,time:new Date().toISOString()});if(ms.length>50)ms=ms.slice(-50);return _R('PUT',{messages:ms})})}).then(function(){I.value='';var F=document.querySelector('.gbf');var D=document.createElement('div');D.className='gbsok';D.innerHTML='<i class="fas fa-check-circle"></i> 留言发送成功！';F.parentNode.insertBefore(D,F.nextSibling);setTimeout(function(){D.remove()},3000);setTimeout(_LD,500)}).catch(function(e){var F=document.querySelector('.gbf');var D=document.createElement('div');D.className='gberr';D.innerHTML='<i class="fas fa-exclamation-circle"></i> 发送失败：'+_E(e.message);F.parentNode.insertBefore(D,F.nextSibling);setTimeout(function(){D.remove()},5000)}).finally(function(){B.disabled=false;B.innerHTML='<i class="fas fa-paper-plane"></i> 发送留言'})}
+window.gbSend=_SD;document.addEventListener('DOMContentLoaded',_LD);
+})();
+</script>
 
 <!-- Contact -->
 <div class="contact">
