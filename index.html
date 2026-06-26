@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>淇″垱杩愮淮宸ョ▼甯?- 涓汉涓婚〉</title>
+    <title>信创运维工程师 - 个人主页</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Microsoft YaHei",sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:20px;overflow-x:hidden;position:relative;padding-top:40px}
@@ -12,7 +12,7 @@
         .news-ticker{position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#c0392b,#e74c3c,#c0392b);background-size:200% 100%;animation:tickerBg 4s ease infinite;z-index:100;padding:8px 0;overflow:hidden}
         .ticker-wrap{display:flex;white-space:nowrap;animation:scrollTicker 30s linear infinite;width:max-content}
         .ticker-item{color:#fff;font-size:0.85em;font-weight:600;display:inline-flex;align-items:center;padding:0 28px;gap:6px}
-        .ticker-item::before{content:"馃搶";font-size:0.9em}
+        .ticker-item::before{content:"📌";font-size:0.9em}
         @keyframes tickerBg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
         @keyframes scrollTicker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
@@ -56,7 +56,7 @@
         /* Headline Card - clickable with link style */
         .news-headline{background:linear-gradient(135deg,#fff5f5,#ffe8e8);border:1px solid #f5c6cb;border-left:4px solid #c0392b;border-radius:12px;padding:16px 18px;margin-bottom:14px;transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden;text-decoration:none;display:block;color:inherit}
         .news-headline:hover{transform:translateX(4px);box-shadow:0 6px 25px rgba(192,57,43,0.15)}
-        .news-headline::after{content:"澶存潯";position:absolute;top:8px;right:-28px;background:#c0392b;color:#fff;font-size:0.68em;font-weight:700;padding:2px 30px;transform:rotate(45deg)}
+        .news-headline::after{content:"头条";position:absolute;top:8px;right:-28px;background:#c0392b;color:#fff;font-size:0.68em;font-weight:700;padding:2px 30px;transform:rotate(45deg)}
         .headline-tag{display:inline-block;background:#c0392b;color:#fff;font-size:0.72em;padding:2px 10px;border-radius:4px;font-weight:700;margin-bottom:8px}
         .headline-title{font-size:1.02em;font-weight:700;color:#1a1a2e;line-height:1.5;margin-bottom:6px}
         .headline-summary{font-size:0.85em;color:#666;line-height:1.6}
@@ -73,7 +73,7 @@
         .card-meta{display:flex;justify-content:space-between;margin-top:7px;font-size:0.7em;color:#bbb}
         .card-source{font-weight:600}
         /* External link indicator */
-        .news-card::after,.news-headline::before{content:"鈫?;position:absolute;opacity:0;transition:opacity 0.3s;font-size:0.85em;color:#c0392b}
+        .news-card::after,.news-headline::before{content:"↗";position:absolute;opacity:0;transition:opacity 0.3s;font-size:0.85em;color:#c0392b}
         .news-card::after{top:12px;right:12px}.news-headline::before{top:12px;right:12px;z-index:2}
         .news-card:hover::after,.news-headline:hover::before{opacity:1}
         
@@ -109,94 +109,94 @@
 <!-- News Ticker Bar -->
 <div class="news-ticker">
     <div class="ticker-wrap">
-        <span class="ticker-item">淇″垱姒傚康24鏃ヤ富鍔涘噣娴佸叆27浜匡紝娴峰厜淇℃伅銆佷腑鍥介暱鍩庨娑?/span>
-        <span class="ticker-item">1485涓囦俊鍒涗簯骞冲彴寮傚湴鐏惧澶у崟钀藉湴</span>
-        <span class="ticker-item">淇″垱ETF鏄撲寒鏂癸紙159540锛夋定4.15%锛岃妯″悓绫荤涓€</span>
-        <span class="ticker-item">涓ゅぇ鏍稿績骞冲彴钀芥埗瑗垮畨楂樻柊鍖猴紝婵€娲昏タ瀹変俊鍒涗骇闆嗙兢</span>
-        <span class="ticker-item">鍥戒骇澶фā鍨嬪簲鐢ㄩ渇姹傛寔缁噴鏀撅紝淇″垱ETF瀵屽浗璧板己</span>
-        <span class="ticker-item">淇″垱姒傚康24鏃ヤ富鍔涘噣娴佸叆27浜匡紝娴峰厜淇℃伅銆佷腑鍥介暱鍩庨娑?/span>
-        <span class="ticker-item">1485涓囦俊鍒涗簯骞冲彴寮傚湴鐏惧澶у崟钀藉湴</span>
-        <span class="ticker-item">淇″垱ETF鏄撲寒鏂癸紙159540锛夋定4.15%锛岃妯″悓绫荤涓€</span>
-        <span class="ticker-item">涓ゅぇ鏍稿績骞冲彴钀芥埗瑗垮畨楂樻柊鍖猴紝婵€娲昏タ瀹変俊鍒涗骇闆嗙兢</span>
-        <span class="ticker-item">鍥戒骇澶фā鍨嬪簲鐢ㄩ渇姹傛寔缁噴鏀撅紝淇″垱ETF瀵屽浗璧板己</span>
+        <span class="ticker-item">办公效率提升35%！银河麒麟支撑江都农商银行新系统全面上线</span>
+        <span class="ticker-item">山西证券×用友金融以全栈信创之力重塑集团财务管控新格局</span>
+        <span class="ticker-item">华为中标中央机关集采，信创ETF易方达催化不断</span>
+        <span class="ticker-item">美光财报验证存储大周期景气，信创ETF易方达大涨6.9%</span>
+        <span class="ticker-item">第三届教育信息技术应用创新大赛报名启动</span>
+        <span class="ticker-item">办公效率提升35%！银河麒麟支撑江都农商银行新系统全面上线</span>
+        <span class="ticker-item">山西证券×用友金融以全栈信创之力重塑集团财务管控新格局</span>
+        <span class="ticker-item">华为中标中央机关集采，信创ETF易方达催化不断</span>
+        <span class="ticker-item">美光财报验证存储大周期景气，信创ETF易方达大涨6.9%</span>
+        <span class="ticker-item">第三届教育信息技术应用创新大赛报名启动</span>
     </div>
 </div>
 
-<div class="particles"><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div></div>
+<div class="particles"><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div></div>
 
 <div class="container">
 
-<div class="avatar" id="avatar">馃枼锔?/div>
-<h1>淇″垱妗岄潰杩愮淮宸ョ▼甯?/h1>
+<div class="avatar" id="avatar">🖥️</div>
+<h1>信创桌面运维工程师</h1>
 <p class="subtitle"><span id="typed-text"></span><span class="typing-cursor"></span></p>
 
 <div class="skills">
-<span class="skill">Windows 杩愮淮</span><span class="skill">Linux 杩愮淮</span><span class="skill">楹掗簾绯荤粺</span><span class="skill">缁熶俊 UOS</span><span class="skill">鍥戒骇鍖栭€傞厤</span><span class="skill">淇″垱瑙ｅ喅鏂规</span>
+<span class="skill">Windows 运维</span><span class="skill">Linux 运维</span><span class="skill">麒麟系统</span><span class="skill">统信 UOS</span><span class="skill">国产化适配</span><span class="skill">信创解决方案</span>
 </div>
 
-<div class="certs"><span class="cert-badge">馃弲 缁熶俊 UOS 璁よ瘉宸ョ▼甯?/span></div>
+<div class="certs"><span class="cert-badge">🏅 统信 UOS 认证工程师</span></div>
 
-<!-- ===== 淇″垱鏂伴椈鍏憡鏉?===== -->
+<!-- ===== 信创新闻公告板 ===== -->
 <div class="news-section">
     <div class="news-header">
-        <span class="news-icon">馃摪</span>
-        <span class="news-title">淇?鍒?鍔?鎬?/span>
-        <span class="update-badge" id="update-time">6鏈堟洿鏂?/span>
+        <span class="news-icon">📰</span>
+        <span class="news-title">信 创 动 态</span>
+        <span class="update-badge" id="update-time">6月更新</span>
     </div>
     <div class="news-divider"></div>
     
-    <!-- 澶存潯 -->
-    <a href="https://www.163.com/dy/article/L070SDL90519QIKK.html" target="_blank" rel="noopener noreferrer" class="news-headline">
-        <span class="headline-tag">甯傚満鐖嗗彂</span>
-        <div class="headline-title">淇″垱姒傚康24鏃ヤ富鍔涘噣娴佸叆27.23浜垮厓锛屾捣鍏変俊鎭€佷腑鍥介暱鍩庛€佸墤妗ヤ簯閫氬眰鍓?/div>
-        <div class="headline-summary">6鏈?4鏃ワ紝淇″垱姒傚康鑲′唤璧板己锛屼富鍔涘噣娴佸叆杈?7.23浜垮厓锛屾捣鍏変俊鎭€佷腑鍥介暱鍩庛€佸墤妗ヤ簯閫氬啗澶ч娑ㄣ€傚浗浜у寲鏇挎崲澶ц秼鍔夸笅锛屼俊鍒涚増鍧楄祫鏈睍鐜伴珮搴﹀叧娉ㄣ€?/div>
+    <!-- 头条 -->
+    <a href="https://www.kylinos.cn/about/news/2061252709718265858.html" target="_blank" rel="noopener noreferrer" class="news-headline">
+        <span class="headline-tag">重磅发布</span>
+        <div class="headline-title">新一代全域智能操作系统麒麟100正式发布</div>
+        <div class="headline-summary">2026智能博览会期间，麒麟软件全新产品——新一代全域智能操作系统麒麟100正式发布，面向万物智联场景，高度可定制化，安全自主，深度融合人工智能技术，开启智能操作系统新时代。</div>
         <div class="headline-meta">
-            <span>馃搮 2026-06-24</span>
-            <span>馃摪 鏂版氮璐㈢粡</span>
-            <span>馃憗 甯傚満鍔ㄦ€?/span>
+            <span>📅 2026-06-01</span>
+            <span>📰 麒麟软件</span>
+            <span>👁 智博会首发</span>
         </div>
     </a>
     
-    <!-- 鏂伴椈鍗＄墖 -->
+    <!-- 新闻卡片 -->
     <div class="news-grid">
-        <a href="https://www.163.com/dy/article/L03ILQ3A0511D6RL.html" target="_blank" rel="noopener noreferrer" class="news-card">
-            <span class="card-category cat-policy">琛屼笟澶у崟</span>
-            <div class="card-title">1485 涓囦俊鍒涗簯骞冲彴寮傚湴鐏惧澶у崟钀藉湴</div>
-            <div class="card-summary">鏌愭満鍏?485涓囧厓淇″垱浜戝钩鍙板紓鍦扮伨澶囬」鐩伐閫氳繃锛屾爣蹇楃潃淇″垱浜戞湇鍔″叆闃哥Щ鏍煎叆娣℃按鍖猴紝鍥戒骇浜戝钩鍙板紓鍦扮伨澶囪兘鍔涘啀涓婂彴闃躲€?/div>
-            <div class="card-meta"><span class="card-source">浜戝ご鏉?/span><span>06-23</span></div>
+        <a href="https://www.kylinos.cn/about/news/2065233582872432642.html" target="_blank" rel="noopener noreferrer" class="news-card">
+            <span class="card-category cat-market">行业应用</span>
+            <div class="card-title">办公效率提升35%！银河麒麟支撑江都农商银行新系统全面上线</div>
+            <div class="card-summary">江都农商银行依托银河麒麟等国产软硬件，完成从底层到上层全面更新，新OA系统内置超200个业务组件，实现全栈国产化技术整合。</div>
+            <div class="card-meta"><span class="card-source">麒麟软件</span><span>06-12</span></div>
         </a>
-        <a href="https://www.163.com/dy/article/L06TKP7B0519D4UH.html" target="_blank" rel="noopener noreferrer" class="news-card">
-            <span class="card-category cat-market">璧勯噾鐑疆</span>
-            <div class="card-title">淇″垱ETF鏄撲寒鏂癸紙159540锛夋定4.15%锛岃繎涓変釜鏈堟定骞?7.14%</div>
-            <div class="card-summary">淇″垱ETF鏄撲寒鏂规垚浜ら澶у锛岃妯″悓绫荤涓€锛岃繎涓変釜鏈堟定骞呴珮杈?.14%锛屼俊鍒涙澘鍧楄祫閲戞姇鍏ユ縺澧炪€?/div>
-            <div class="card-meta"><span class="card-source">鍜岃缃?/span><span>06-24</span></div>
+        <a href="https://www.kylinos.cn/about/news/2064143442590666754.html" target="_blank" rel="noopener noreferrer" class="news-card">
+            <span class="card-category cat-tech">技术前沿</span>
+            <div class="card-title">全栈国产旗舰工作站来了：银河麒麟+海光+联想开天</div>
+            <div class="card-summary">麒麟软件携手联想开天、海光信息、砺算科技，推出搭载银河麒麟桌面操作系统V11的全栈国产旗舰工作站联想开天P5h G1t。</div>
+            <div class="card-meta"><span class="card-source">麒麟软件</span><span>06-09</span></div>
         </a>
-        <a href="https://www.163.com/dy/article/KVVA9AGT0514R9KE.html" target="_blank" rel="noopener noreferrer" class="news-card">
-            <span class="card-category cat-policy">浜т笟瑙勫垝</span>
-            <div class="card-title">涓ゅぇ鏍稿績骞冲彴钀芥埗瑗垮畨楂樻柊鍖猴紝婵€娲昏タ瀹変俊鍒涗骇闆嗙兢</div>
-            <div class="card-summary">涓ゅぇ淇″垱鏍稿績骞冲彴姝ｅ紡钀芥埗瑗垮畨楂樻柊鍖猴紝闆嗕腑瀹夋帓浜т笟璧勬簮锛屾縺娲昏タ瀹変俊鍒涗骇闆嗙兢鍙戝睍鏂板姩鑳姐€?/div>
-            <div class="card-meta"><span class="card-source">涓浗鏃ユ姤缃?/span><span>06-21</span></div>
+        <a href="https://www.kylinos.cn/about/news/2062697408408686593.html" target="_blank" rel="noopener noreferrer" class="news-card">
+            <span class="card-category cat-cert">人才培育</span>
+            <div class="card-title">第三届教育信息技术应用创新大赛报名启动</div>
+            <div class="card-summary">2026第三届教育信创大赛正式启动，麒麟软件搭建基于银河麒麟操作系统的比赛环境，全面助力信创人才遴选与培养。</div>
+            <div class="card-meta"><span class="card-source">麒麟软件</span><span>06-05</span></div>
         </a>
-        <a href="https://www.163.com/dy/article/L06OLI010512B07B.html" target="_blank" rel="noopener noreferrer" class="news-card">
-            <span class="card-category cat-tech">AI 铻嶅悎</span>
-            <div class="card-title">鍥戒骇澶фā鍨嬪簲鐢ㄩ渇姹傛寔缁噴鏀撅紝淇″垱ETF瀵屽浗璧板己</div>
-            <div class="card-summary">鍥戒骇澶фā鍨嬪簲鐢ㄩ渇姹傛寔缁噴鏀撅紝淇″垱+AI铻嶅悎瓒嬪娍鏄庢樉锛屼俊鍒汥TF瀵屽浗锛?59538锛変笅鍗堢洏涓洏娑ㄥ箙杈?.45%銆?/div>
-            <div class="card-meta"><span class="card-source">姣忔棩缁忔祹鏂伴椈</span><span>06-24</span></div>
+        <a href="https://www.360kuai.com/pc/9e3a1040c241e0b53?cota=3&kuai_so=1&refer_scene=so_3&sign=360_da20e874" target="_blank" rel="noopener noreferrer" class="news-card">
+            <span class="card-category cat-market">行业应用</span>
+            <div class="card-title">华为中标中央机关集采，信创ETF易方达催化不断</div>
+            <div class="card-summary">中信建投证券指出，陆家嘴论坛政策组合拳强化科技成长主线，信创作为数字经济发展核心底座，覆盖基础硬件、基础软件等多个领域。</div>
+            <div class="card-meta"><span class="card-source">快资讯</span><span>06-26</span></div>
         </a>
     </div>
     
-    <!-- 琛屼笟閲戝彞 -->
+    <!-- 行业金句 -->
     <div class="news-quote">
-        <div class="quote-text">"淇″垱浜т笟姝ｄ粠鏀跨瓥椹卞姩杞悜甯傚満椹卞姩锛屽浗浜у寲鏇挎崲榪涘叆娣辨按鍖猴紝鍏ㄦ爤鑷富鍙帶鎴愪负琛屼笟鍏辫瘑銆傛妸鏍稿績鎶€鏈墷鐗㈡帉鎻″湪鑷繁鎵嬩腑锛屾墠鑳藉湪浠讳綍椋庢氮闈㈠墠浠庡涓嶈揩銆?/div>
-        <div class="quote-author">鈥斺€?淇″垱琛屼笟瑙傚療 2026骞?鏈?/div>
+        <div class="quote-text">"操作系统是数字中国的根基，只有把核心技术牢牢掌握在自己手中，才能在任何风浪面前从容不迫、行稳致远。"</div>
+        <div class="quote-author">—— 麒麟软件 2026智博会</div>
     </div>
 </div>
 
-<!-- ===== 鐣欒█鏉?Giscus ===== -->
+<!-- ===== 留言板 Giscus ===== -->
 <div class="giscus-wrap" style="margin:32px 0 20px 0;animation:slideUp 0.6s ease 0.75s both">
     <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px">
-        <span style="font-size:1.3em">馃挰</span>
-        <span style="font-size:1.1em;font-weight:800;color:#1a1a2e;letter-spacing:1px">鐣?瑷€ 鏉?/span>
+        <span style="font-size:1.3em">💬</span>
+        <span style="font-size:1.1em;font-weight:800;color:#1a1a2e;letter-spacing:1px">留 言 板</span>
         <span style="font-size:0.72em;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:2px 10px;border-radius:10px;font-weight:600;vertical-align:middle">New</span>
     </div>
     <div style="height:2px;background:linear-gradient(90deg,transparent,#0f3460,#16213e,#0f3460,transparent);border-radius:2px;margin-bottom:18px"></div>
@@ -220,30 +220,30 @@
 
 <!-- Contact -->
 <div class="contact">
-<div class="contact-title">鑱旂郴鏂瑰紡</div>
-<div class="wechat-box" title="鐐瑰嚮澶嶅埗寰俊鍙?><span class="wechat-icon">馃挰</span><span id="wechat-id">tgf668888</span></div>
+<div class="contact-title">联系方式</div>
+<div class="wechat-box" title="点击复制微信号"><span class="wechat-icon">💬</span><span id="wechat-id">tgf668888</span></div>
 </div>
 
 <!-- Links -->
 <div class="links">
 <a href="https://github.com/gongtongfeng" class="link" target="_blank">GitHub</a>
-<a href="#" class="link">鍗氬</a>
-<a href="#" class="link">绠€鍘?/a>
+<a href="#" class="link">博客</a>
+<a href="#" class="link">简历</a>
 </div>
 
-<p class="footer">Created with <span class="footer-heart">鈾?/span> by QClaw AI 路 2026</p>
+<p class="footer">Created with <span class="footer-heart">♥</span> by QClaw AI · 2026</p>
 </div>
 
 <script>
 /* Typing effect */
-const texts=["Windows / Linux 妗岄潰杩愮淮","淇″垱缁堢鍥戒骇鍖栭€傞厤","楹掗簾绯荤粺 & 缁熶俊 UOS 涓撳","鎻愪緵涓撲笟妗岄潰杩愮淮瑙ｅ喅鏂规"];
+const texts=["Windows / Linux 桌面运维","信创终端国产化适配","麒麟系统 & 统信 UOS 专家","提供专业桌面运维解决方案"];
 let textIndex=0,charIndex=0,isDeleting=false;
 const typedEl=document.getElementById("typed-text");
 function typeEffect(){const currentText=texts[textIndex];if(isDeleting){typedEl.textContent=currentText.substring(0,charIndex-1);charIndex--}else{typedEl.textContent=currentText.substring(0,charIndex+1);charIndex++}let speed=isDeleting?40:100;if(!isDeleting&&charIndex===currentText.length){speed=2200;isDeleting=true}else if(isDeleting&&charIndex===0){isDeleting=false;textIndex=(textIndex+1)%texts.length;speed=400}setTimeout(typeEffect,speed)}
 typeEffect();
 
 /* Avatar click */
-const avatar=document.getElementById("avatar");const emojis=["馃枼锔?,"鈿欙笍","馃惂","馃弳","鉁?,"馃殌","馃挭","馃敡"];let emojiIdx=0;
+const avatar=document.getElementById("avatar");const emojis=["🖥️","⚙️","🐧","🏆","✅","🚀","💪","🔧"];let emojiIdx=0;
 avatar.addEventListener("click",function(e){emojiIdx=(emojiIdx+1)%emojis.length;avatar.textContent=emojis[emojiIdx];createRipple(e)});
 function createRipple(e){var r=document.createElement("div");r.className="ripple";r.style.left=e.clientX+"px";r.style.top=e.clientY+"px";document.body.appendChild(r);setTimeout(function(){r.remove()},700)}
 document.addEventListener("click",function(e){if(e.target.closest(".container"))createRipple(e)});
@@ -253,10 +253,10 @@ document.querySelectorAll(".skill").forEach(function(el){el.addEventListener("cl
 
 /* Wechat copy */
 var wechatBox=document.querySelector(".wechat-box");var wechatId=document.getElementById("wechat-id");
-wechatBox.addEventListener("click",function(){navigator.clipboard.writeText(wechatId.textContent).then(function(){var orig=wechatBox.innerHTML;wechatBox.innerHTML='<span class="wechat-icon">鉁?/span> 宸插鍒讹紒';setTimeout(function(){wechatBox.innerHTML=orig},1500)},function(){})});
+wechatBox.addEventListener("click",function(){navigator.clipboard.writeText(wechatId.textContent).then(function(){var orig=wechatBox.innerHTML;wechatBox.innerHTML='<span class="wechat-icon">✅</span> 已复制！';setTimeout(function(){wechatBox.innerHTML=orig},1500)},function(){})});
 
 /* Update time display */
-var now=new Date();var months=["1鏈?,"2鏈?,"3鏈?,"4鏈?,"5鏈?,"6鏈?,"7鏈?,"8鏈?,"9鏈?,"10鏈?,"11鏈?,"12鏈?];
-document.getElementById("update-time").textContent=months[now.getMonth()]+"鏈?鏇存柊";
+var now=new Date();var months=["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
+document.getElementById("update-time").textContent=months[now.getMonth()]+"更新";
 </script>
 </body></html>
