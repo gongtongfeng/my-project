@@ -29,7 +29,7 @@
         /* Avatar */
         .avatar{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#0f3460,#16213e,#533483);background-size:200% 200%;margin:0 auto 26px;display:flex;justify-content:center;align-items:center;font-size:52px;line-height:1;box-shadow:0 12px 35px rgba(15,52,96,0.45);cursor:pointer;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.4s;animation:gradientShift 4s ease infinite,avatarIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.2s both;user-select:none;-webkit-tap-highlight-color:transparent}
         .avatar:hover{transform:scale(1.12) rotate(5deg);box-shadow:0 18px 50px rgba(15,52,96,0.55)}.avatar:active{transform:scale(0.95)}
-        @keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:50% 50%}}@keyframes avatarIn{from{opacity:0;transform:scale(0) rotate(-180deg)}to{opacity:1;transform:scale(1) rotate(0deg)}}
+        @keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}@keyframes avatarIn{from{opacity:0;transform:scale(0) rotate(-180deg)}to{opacity:1;transform:scale(1) rotate(0deg)}}
 
         h1{color:#1a1a2e;margin-bottom:6px;font-size:1.8em;font-weight:800;letter-spacing:-0.5px;animation:slideUp 0.6s ease 0.35s both}
         .subtitle{color:#555;font-size:1em;margin-bottom:24px;line-height:1.5;animation:slideUp 0.6s ease 0.45s both}.typing-cursor{display:inline-block;width:2px;height:1em;background:#0f3460;margin-left:2px;vertical-align:text-bottom;animation:blink 0.8s step-end infinite}@keyframes blink{50%{opacity:0}}@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
@@ -109,18 +109,22 @@
 <!-- News Ticker Bar -->
 <div class="news-ticker">
     <div class="ticker-wrap">
-        <span class="ticker-item">习近平考察国家信创园：打造科技创新高地</span>
-        <span class="ticker-item">新一代全域智能操作系统麒麟100正式发布</span>
-        <span class="ticker-item">苹果启动长鑫存储DRAM芯片内部测试</span>
-        <span class="ticker-item">银河麒麟企业级办公智能体Kylinbot亮相</span>
-        <span class="ticker-item">第三届教育信息技术应用创新大赛启动</span>
-        <span class="ticker-item">全栈国产旗舰工作站：银河麒麟+海光+联想开天</span>
-        <span class="ticker-item">习近平考察国家信创园：打造科技创新高地</span>
-        <span class="ticker-item">新一代全域智能操作系统麒麟100正式发布</span>
-        <span class="ticker-item">苹果启动长鑫存储DRAM芯片内部测试</span>
-        <span class="ticker-item">银河麒麟企业级办公智能体Kylinbot亮相</span>
-        <span class="ticker-item">第三届教育信息技术应用创新大赛启动</span>
-        <span class="ticker-item">全栈国产旗舰工作站：银河麒麟+海光+联想开天</span>
+        <span class="ticker-item">麒麟软件全栈支撑深圳地铁13号线贯通</span>
+        <span class="ticker-item">直面金融运维难题，麒麟软件培训很实用</span>
+        <span class="ticker-item">麒麟软件获评河南省级首批技术支持单位</span>
+        <span class="ticker-item">电科金仓、海光信息与麒麟软件达成战略合作</span>
+        <span class="ticker-item">炎核多内核CAD&amp;CAE平台与银河麒麟完成全栈适配</span>
+        <span class="ticker-item">系统装好了，高拍仪等外设却“罢工”？这个老大难终于有解了</span>
+        <span class="ticker-item">这家头部车企入职“AI安全巡检员”！国产方案效率拉满</span>
+        <span class="ticker-item">超大规模运维、精细化管控、全场景覆盖！麒麟软件用产品力数说金融转型</span>
+        <span class="ticker-item">麒麟软件全栈支撑深圳地铁13号线贯通</span>
+        <span class="ticker-item">直面金融运维难题，麒麟软件培训很实用</span>
+        <span class="ticker-item">麒麟软件获评河南省级首批技术支持单位</span>
+        <span class="ticker-item">电科金仓、海光信息与麒麟软件达成战略合作</span>
+        <span class="ticker-item">炎核多内核CAD&amp;CAE平台与银河麒麟完成全栈适配</span>
+        <span class="ticker-item">系统装好了，高拍仪等外设却“罢工”？这个老大难终于有解了</span>
+        <span class="ticker-item">这家头部车企入职“AI安全巡检员”！国产方案效率拉满</span>
+        <span class="ticker-item">超大规模运维、精细化管控、全场景覆盖！麒麟软件用产品力数说金融转型</span>
     </div>
 </div>
 
@@ -143,54 +147,51 @@
     <div class="news-header">
         <span class="news-icon">📰</span>
         <span class="news-title">信 创 动 态</span>
-        <span class="update-badge" id="update-time">7月更新</span>
+        <span class="update-badge" id="update-time">6月更新</span>
     </div>
     <div class="news-divider"></div>
     
     <!-- 头条 -->
-    <a href="https://news.cctv.com/2026/07/09/ARTIawNgAhmh7eXGErjMlGbi260709.shtml" target="_blank" rel="noopener noreferrer" class="news-headline">
-        <span class="headline-tag">高层关注</span>
-        <div class="headline-title">习近平考察国家信创园：科技创新始终在总书记的学习清单上</div>
-        <div class="headline-summary">"十五五"开局之年，习近平总书记来到位于北京亦庄的国家信创园考察调研。他强调，要把科技自立自强作为国家发展的战略支撑，信创产业是数字中国的根基所在。</div>
+    <a href="https://www.kylinos.cn/about/news/2072855398562500610.html" target="_blank" rel="noopener noreferrer" class="news-headline">
+        <span class="headline-tag">重大突破</span>
+        <div class="headline-title">麒麟软件全栈支撑深圳地铁13号线贯通</div>
+        <div class="headline-summary">麒麟软件为深圳地铁13号线（黄金科创线）提供从列车控制系统到车站终端的全栈国产操作系统支撑，助力粤港澳大湾区轨道交通自主可控运营。</div>
         <div class="headline-meta">
-            <span>📅 2026-07-09</span>
-            <span>📰 央视网</span>
-            <span>👁 国家信创园</span>
+            <span>📅 2026-06-30</span>
+            <span>📰 麒麟软件</span>
+            <span>👁 交通信创</span>
         </div>
     </a>
     
     <!-- 新闻卡片 -->
     <div class="news-grid">
-        <a href="https://www.kylinos.cn/about/news/2061252709718265858.html" target="_blank" rel="noopener noreferrer" class="news-card">
-            <span class="card-category cat-tech">重磅发布</span>
-            <div class="card-title">新一代全域智能操作系统麒麟100正式发布</div>
-            <div class="card-summary">2026智能博览会期间，麒麟软件全新产品麒麟100智联操作系统正式发布，面向万物智联场景，高度可定制化，安全自主，深度融合人工智能技术。</div>
-            <div class="card-meta"><span class="card-source">麒麟软件</span><span>06-01</span></div>
-        </a>
-        <a href="https://www.eet-china.com/news/202607092059.html" target="_blank" rel="noopener noreferrer" class="news-card">
-            <span class="card-category cat-market">国产芯片</span>
-            <div class="card-title">外媒：苹果启动长鑫存储DRAM芯片内部测试</div>
-            <div class="card-summary">苹果已开启长鑫存储DRAM内存芯片内部测试，规划搭载于中国市场设备。苹果牵头美企游说监管层，寻求放宽对国产存储的使用限制。</div>
-            <div class="card-meta"><span class="card-source">电子工程专辑</span><span>07-09</span></div>
-        </a>
-        <a href="https://www.kylinos.cn/about/news/2065233582872432642.html" target="_blank" rel="noopener noreferrer" class="news-card">
-            <span class="card-category cat-policy">行业应用</span>
-            <div class="card-title">银河麒麟支撑江都农商银行新系统上线，办公效率提升35%</div>
-            <div class="card-summary">江都农商银行依托银河麒麟等国产软硬件，完成全栈国产化技术整合，新OA系统内置超200个业务组件，实现从底层到上层全面更新。</div>
-            <div class="card-meta"><span class="card-source">麒麟软件</span><span>06-12</span></div>
-        </a>
-        <a href="https://www.kylinos.cn/about/news/2062697408408686593.html" target="_blank" rel="noopener noreferrer" class="news-card">
-            <span class="card-category cat-cert">人才培育</span>
-            <div class="card-title">第三届教育信息技术应用创新大赛报名启动</div>
-            <div class="card-summary">2026第三届教育信创大赛正式启动，麒麟软件搭建基于银河麒麟操作系统的比赛环境，全面助力信创人才遴选与培养。</div>
-            <div class="card-meta"><span class="card-source">麒麟软件</span><span>06-05</span></div>
+<a href="https://www.kylinos.cn/about/news/2074656898494337026.html" target="_blank" rel="noopener noreferrer" class="news-card">
+            <span class="card-category cat-market">金融信创</span>
+            <div class="card-title">超大规模运维、精细化管控、全场景覆盖！麒麟软件用产品力数说金融转型深水区</div>
+            <div class="card-summary">麒麟软件围绕金融行业超大规模运维、精细化管控、全场景覆盖需求，展示国产操作系统在金融转型深水区的硬核产品力。</div>
+            <div class="card-meta"><span class="card-source">麒麟软件</span><span>07-08</span></div>
+        </a><a href="https://www.kylinos.cn/about/news/2072857254378442753.html" target="_blank" rel="noopener noreferrer" class="news-card">
+            <span class="card-category cat-cert">生态合作</span>
+            <div class="card-title">电科金仓、海光信息与麒麟软件达成战略合作，共筑自主创新数智新生态</div>
+            <div class="card-summary">国产操作系统、数据库、处理器三大核心厂商强强联合，围绕基础软件协同创新、联合适配测试、行业解决方案共建等展开深度合作。</div>
+            <div class="card-meta"><span class="card-source">麒麟软件</span><span>07-03</span></div>
+        </a><a href="https://www.kylinos.cn/about/news/2073955029262372866.html" target="_blank" rel="noopener noreferrer" class="news-card">
+            <span class="card-category cat-tech">工业软件</span>
+            <div class="card-title">筑牢国产仿真底座！炎核多内核CAD&amp;CAE开发平台与银河麒麟完成全栈适配</div>
+            <div class="card-summary">炎核多内核CAD&amp;CAE开发平台与银河麒麟操作系统完成全栈适配，为国产工业设计软件提供稳定可靠的底层支撑。</div>
+            <div class="card-meta"><span class="card-source">麒麟软件</span><span>07-06</span></div>
+        </a><a href="https://www.kylinos.cn/about/news/2075386170796249090.html" target="_blank" rel="noopener noreferrer" class="news-card">
+            <span class="card-category cat-policy">教育培训</span>
+            <div class="card-title">深耕河南教育创新，麒麟软件获评省级首批技术支持单位</div>
+            <div class="card-summary">麒麟软件凭借在国产操作系统教育领域的持续投入，获评河南省首批教育信息技术应用创新技术支持单位。</div>
+            <div class="card-meta"><span class="card-source">麒麟软件</span><span>07-10</span></div>
         </a>
     </div>
     
     <!-- 行业金句 -->
     <div class="news-quote">
-        <div class="quote-text">"现场学习，很开眼界。操作系统是数字中国的根基，只有把核心技术牢牢掌握在自己手中，才能在任何风浪面前从容不迫、行稳致远。"</div>
-        <div class="quote-author">—— 习近平总书记考察国家信创园 · 2026年7月</div>
+        <div class="quote-text">坚持把核心技术掌握在自己手中，以自主操作系统筑牢数字中国底座，方能在百年变局中赢得主动。</div>
+        <div class="quote-author">—— 麒麟软件 2026年中</div>
     </div>
 </div>
 
